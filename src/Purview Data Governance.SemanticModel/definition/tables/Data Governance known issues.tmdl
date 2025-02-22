@@ -1,0 +1,75 @@
+table 'Data Governance known issues'
+	lineageTag: 6fa01034-a4d7-4388-82fa-c9d704b53119
+
+	column 'Issue ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: d27a7103-c70d-4496-aec1-4098ee529f5f
+		summarizeBy: count
+		sourceColumn: Issue ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: 98de6d29-cd86-4544-97d3-a2da3853c8ae
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Publish Date'
+		dataType: dateTime
+		formatString: dd-mmm-yyyy
+		lineageTag: e9247b78-ebdf-4c25-a999-fb7b997b3a89
+		summarizeBy: none
+		sourceColumn: Publish Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Status
+		dataType: string
+		lineageTag: bf7dd0ea-0dd8-472b-9535-75054ce11f86
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fixed Date'
+		dataType: string
+		lineageTag: 785b40ca-460f-4430-b7ec-cf54904f2f40
+		summarizeBy: none
+		sourceColumn: Fixed Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Issue Category ID'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f45f2607-99fd-4b06-8170-5d128f3e3306
+		summarizeBy: none
+		sourceColumn: Issue Category ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Data Governance known issues' = m
+		mode: import
+		queryGroup: 'Known Issues'
+		source =
+				let
+				    // All Issues
+				    Source = Table.Combine({#"Unified Catalog management", Discovery, #"Health management"})
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

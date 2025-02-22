@@ -1,0 +1,8 @@
+relationship c386cce4-2af0-9fe3-6fa8-8a536a2310b2
+	fromColumn: 'Data Governance known issues'.'Issue Category ID'
+	toColumn: IssueCategory.'Issue Category ID'
+
+relationship 6d8ae592-de39-9c43-d3c8-d3167122ac91
+	fromColumn: 'Supported Data Sources'.'Data Source Category ID'
+	toColumn: DataSourceCategory.'Data Source Category ID'
+

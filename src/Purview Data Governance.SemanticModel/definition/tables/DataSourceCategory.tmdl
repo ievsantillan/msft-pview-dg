@@ -1,0 +1,40 @@
+table DataSourceCategory
+	lineageTag: 594a05da-e1fd-4a17-9801-4823c4869bd3
+
+	column 'Data Source Category ID'
+		isHidden
+		formatString: 0
+		lineageTag: a97087c0-217f-416f-b388-dbd76a12f9ff
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Data Source Category ID]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data Source Category'
+		lineageTag: 2a6c8440-2ac4-4264-a5c7-add247649f96
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Data Source Category]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DataSourceCategory = calculated
+		mode: import
+		source = ```
+				
+				DATATABLE(
+				    "Data Source Category ID", INTEGER,
+				    "Data Source Category", STRING,
+				    {
+				        {1, "Azure"},
+				        {2, "Database"},
+				        {3, "File"},
+				        {4, "Services & apps"}
+				    }
+				)
+				
+				```
+
+	annotation PBI_Id = cfc532c8fe394171b0c743c234a46f68
+

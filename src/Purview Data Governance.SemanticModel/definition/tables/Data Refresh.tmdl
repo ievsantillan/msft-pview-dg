@@ -1,0 +1,55 @@
+table 'Data Refresh'
+	lineageTag: 3566d7f1-8d53-4ea2-b218-5e4114c6a810
+
+	column DateTime
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9861167b-aef1-497a-85b2-3ddcd5d478ad
+		summarizeBy: none
+		sourceColumn: DateTime
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: 3eae382e-daf8-4c6d-8628-09b96c09a24f
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Time
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: aebb1551-fcb2-490e-a609-b2afd50f601b
+		summarizeBy: none
+		sourceColumn: Time
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	partition 'Data Refresh' = m
+		mode: import
+		source =
+				let
+				    Source = DateTime.FixedLocalNow(),
+				    #"Converted to Table" = #table(1, {{Source}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Converted to Table",{{"Column1", "DateTime"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"DateTime", type datetime}}),
+				    #"Duplicated Column" = Table.DuplicateColumn(#"Changed Type", "DateTime", "Date"),
+				    #"Extracted Date" = Table.TransformColumns(#"Duplicated Column",{{"Date", DateTime.Date, type date}}),
+				    #"Duplicated Column1" = Table.DuplicateColumn(#"Extracted Date", "DateTime", "Time"),
+				    #"Extracted Time" = Table.TransformColumns(#"Duplicated Column1",{{"Time", DateTime.Time, type time}})
+				in
+				    #"Extracted Time"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

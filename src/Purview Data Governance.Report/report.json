@@ -1,0 +1,225 @@
+{
+  "config": "{\"version\":\"5.57\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU08\",\"version\":\"5.57\",\"type\":2}},\"activeSectionIndex\":1,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU08",
+            "path": "BaseThemes/CY24SU08.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    },
+    {
+      "resourcePackage": {
+        "items": [
+          {
+            "name": "Purview_logo37850527066643136.png",
+            "path": "Purview_logo37850527066643136.png",
+            "type": 100
+          },
+          {
+            "name": "purview_bg024501791921586413.png",
+            "path": "purview_bg024501791921586413.png",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"objects\":{\"outspace\":[{\"properties\":{\"image\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'purview_bg.png'\"}}},\"url\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"purview_bg024501791921586413.png\"}}},\"scaling\":{\"expr\":{\"Literal\":{\"Value\":\"'Fit'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"80D\"}}}}}]}}",
+      "displayName": "Known Issues",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "3a173bc2419883380e29",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"18d2bef3a00dc2310aed\",\"layouts\":[{\"id\":0,\"position\":{\"x\":112,\"y\":16,\"z\":3000,\"width\":656.0000000000001,\"height\":64,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Purview Data Governance\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"20pt\"}}]},{\"textRuns\":[{\"value\":\"Known Issues\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontFamily\":\"Segoe UI Light\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 64.00,
+          "width": 656.00,
+          "x": 112.00,
+          "y": 16.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"227f6bd0ab46fadd683b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1207.9370078740158,\"y\":691.6535433070866,\"z\":4000,\"width\":71.81102362204724,\"height\":24.188976377952756,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Data Refresh.Date)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Data Refresh\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Date\"}},\"Function\":3},\"Name\":\"Min(Data Refresh.Date)\",\"NativeReferenceName\":\"Earliest Date\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Date\"}},\"Function\":3}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"8D\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 24.19,
+          "width": 71.81,
+          "x": 1207.94,
+          "y": 691.65,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"27ddd6c74a9da94d299d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":688,\"z\":6000,\"width\":568,\"height\":32,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Source: \",\"textStyle\":{\"fontSize\":\"8pt\"}},{\"value\":\"Known issues in Microsoft Purview Data Governance | Microsoft Learn\",\"textStyle\":{\"fontSize\":\"8pt\"},\"url\":\"https://learn.microsoft.com/en-us/purview/data-governance-known-issues\"}]}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"100D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 32.00,
+          "width": 568.00,
+          "x": 0.00,
+          "y": 688.00,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"460d8669c9880d19dc8c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":32,\"y\":248.00000000000003,\"z\":2000,\"width\":1224,\"height\":400.00000000000006,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"CountNonNull(Data Governance known issues.Issue ID)\"},{\"queryRef\":\"Data Governance known issues.Title\"},{\"queryRef\":\"Data Governance known issues.Publish Date\"},{\"queryRef\":\"Data Governance known issues.Status\"},{\"queryRef\":\"Data Governance known issues.Fixed Date\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Data Governance known issues\",\"Type\":0},{\"Name\":\"k\",\"Entity\":\"Known data governance issues\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Issue ID\"},\"Name\":\"CountNonNull(Data Governance known issues.Issue ID)\",\"NativeReferenceName\":\"Issue ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Title\"},\"Name\":\"Data Governance known issues.Title\",\"NativeReferenceName\":\"Title1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Publish Date\"},\"Name\":\"Data Governance known issues.Publish Date\",\"NativeReferenceName\":\"Publish Date\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Status\"},\"Name\":\"Data Governance known issues.Status\",\"NativeReferenceName\":\"Status1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Fixed Date\"},\"Name\":\"Data Governance known issues.Fixed Date\",\"NativeReferenceName\":\"Fixed Date1\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Issue ID\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnHeaders\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Center'\"}}}}}],\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"716.750469415015D\"}}}},\"selector\":{\"metadata\":\"Data Governance known issues.Title\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"281.9636445801353D\"}}}},\"selector\":{\"metadata\":\"Data Governance known issues.Fixed Date\"}}],\"columnFormatting\":[{\"properties\":{\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Center'\"}}}},\"selector\":{\"metadata\":\"Data Governance known issues.Fixed Date\"}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 400.00,
+          "width": 1224.00,
+          "x": 32.00,
+          "y": 248.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"5bbb09e2c5c0cc5b1bad\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1111.9370078740158,\"y\":686.3622047244094,\"z\":5000,\"width\":104.31496062992126,\"height\":32.503937007874015,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Last Update:\",\"textStyle\":{\"fontSize\":\"8pt\",\"lineHeight\":\"0\",\"position\":\"relative\",\"verticalAlign\":\"baseline\",\"scriptType\":\"sub\",\"bottom\":\"-0.25em\"}}],\"horizontalTextAlignment\":\"right\"}]}}]}}}",
+          "filters": "[]",
+          "height": 32.50,
+          "width": 104.31,
+          "x": 1111.94,
+          "y": 686.36,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"8073cb33089d3c594159\",\"layouts\":[{\"id\":0,\"position\":{\"x\":80,\"y\":112.00000000000001,\"z\":1000,\"width\":1136,\"height\":80,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"IssueCategory.Issue Category\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"i\",\"Entity\":\"IssueCategory\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"Issue Category\"},\"Name\":\"IssueCategory.Issue Category\",\"NativeReferenceName\":\"Issue Category\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"i\",\"Entity\":\"IssueCategory\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"i\"}},\"Property\":\"Issue Category\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Health Management'\"}}]]}}}]}}}}],\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"header\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Product experience'\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showRestatement\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}},\"italic\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"items\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"100D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 80.00,
+          "width": 1136.00,
+          "x": 80.00,
+          "y": 112.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"cfdc3eca004780602078\",\"layouts\":[{\"id\":0,\"position\":{\"x\":32,\"y\":16,\"z\":0,\"width\":80,\"height\":80,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"Purview_logo37850527066643136.png\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 80.00,
+          "width": 80.00,
+          "x": 32.00,
+          "y": 16.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"objects\":{\"outspace\":[{\"properties\":{\"image\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'purview_bg.png'\"}}},\"url\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"purview_bg024501791921586413.png\"}}},\"scaling\":{\"expr\":{\"Literal\":{\"Value\":\"'Fit'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"80D\"}}}}}]}}",
+      "displayName": "Supported Data Sources & File Types",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "a93166ce30387919c7b1",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0f2cbf63f3cd50caf455\",\"layouts\":[{\"id\":0,\"position\":{\"x\":32,\"y\":16,\"z\":0,\"width\":80,\"height\":80,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"Purview_logo37850527066643136.png\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 80.00,
+          "width": 80.00,
+          "x": 32.00,
+          "y": 16.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"1ba1ba3801967804222c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":119.88582302568983,\"y\":224.0152235965747,\"z\":6000,\"width\":239.77164605137966,\"height\":432.27402473834445,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Supported Data Sources.Data source\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Supported Data Sources\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Data source\"},\"Name\":\"Supported Data Sources.Data source\",\"NativeReferenceName\":\"Data source\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"general\":[{\"properties\":{\"selfFilterEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"header\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Data store'\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"items\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 432.27,
+          "width": 239.77,
+          "x": 119.89,
+          "y": 224.02,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"37c974f6fc29add790cc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":448.00000000000006,\"y\":672,\"z\":8000,\"width\":728,\"height\":48,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"* Besides the lineage on assets within the data source, lineage is also supported if dataset is used as a source/sink in \",\"textStyle\":{\"fontSize\":\"8pt\"}},{\"value\":\"Data Factory\",\"textStyle\":{\"fontSize\":\"8pt\"},\"url\":\"https://learn.microsoft.com/en-us/purview/how-to-link-azure-data-factory\"},{\"value\":\" or \",\"textStyle\":{\"fontSize\":\"8pt\"}},{\"value\":\"Synapse pipeline\",\"textStyle\":{\"fontSize\":\"8pt\"},\"url\":\"https://learn.microsoft.com/en-us/purview/how-to-lineage-azure-synapse-analytics\"},{\"value\":\".\",\"textStyle\":{\"fontSize\":\"8pt\"}}]},{\"textRuns\":[{\"value\":\"** Power BI items in a Fabric tenant are available using live view.\",\"textStyle\":{\"fontSize\":\"8pt\"}}]}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"100D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 48.00,
+          "width": 728.00,
+          "x": 448.00,
+          "y": 672.00,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"5bbb95f5e918e2332cda\",\"layouts\":[{\"id\":0,\"position\":{\"x\":368.5632730732636,\"y\":224.0152235965747,\"z\":2000,\"width\":815.2235965746908,\"height\":432.27402473834445,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Supported Data Sources.Data source\"},{\"queryRef\":\"Supported Data Sources.Classification\"},{\"queryRef\":\"Supported Data Sources.Sensitivity Labels\"},{\"queryRef\":\"Supported Data Sources.Access Policy\"},{\"queryRef\":\"Supported Data Sources.Lineage\"},{\"queryRef\":\"Supported Data Sources.Live View\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Supported Data Sources\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Classification\"},\"Name\":\"Supported Data Sources.Classification\",\"NativeReferenceName\":\"Classification1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Lineage\"},\"Name\":\"Supported Data Sources.Lineage\",\"NativeReferenceName\":\"Lineage\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Access Policy\"},\"Name\":\"Supported Data Sources.Access Policy\",\"NativeReferenceName\":\"Access Policy1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Live View\"},\"Name\":\"Supported Data Sources.Live View\",\"NativeReferenceName\":\"Live View\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Sensitivity Labels\"},\"Name\":\"Supported Data Sources.Sensitivity Labels\",\"NativeReferenceName\":\"Sensitivity Labels\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Data source\"},\"Name\":\"Supported Data Sources.Data source\",\"NativeReferenceName\":\"Data source\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Classification\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnHeaders\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Center'\"}}}}}],\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"96.80314960629921D\"}}}},\"selector\":{\"metadata\":\"Supported Data Sources.Classification\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"96.35433070866142D\"}}}},\"selector\":{\"metadata\":\"Supported Data Sources.Lineage\"}}],\"columnFormatting\":[{\"properties\":{\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Center'\"}}}},\"selector\":{\"metadata\":\"Supported Data Sources.Classification\"}},{\"properties\":{\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Center'\"}}}},\"selector\":{\"metadata\":\"Supported Data Sources.Lineage\"}},{\"properties\":{\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Center'\"}}}},\"selector\":{\"metadata\":\"Supported Data Sources.Access Policy\"}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 432.27,
+          "width": 815.22,
+          "x": 368.56,
+          "y": 224.02,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"698d6e537b58b8b2b15c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":688,\"z\":7000,\"width\":568,\"height\":32,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Source: \",\"textStyle\":{\"fontSize\":\"8pt\"}},{\"value\":\"Microsoft Purview Data Map supported data sources and file types | Microsoft Learn\",\"textStyle\":{\"fontSize\":\"8pt\"},\"url\":\"https://learn.microsoft.com/en-us/purview/microsoft-purview-connector-overview\"}]}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"100D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 32.00,
+          "width": 568.00,
+          "x": 0.00,
+          "y": 688.00,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"6e032cf24d055458c20c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1042.664129400571,\"y\":67.1360608943863,\"z\":9000,\"width\":147.9733587059943,\"height\":61.65556612749762,\"tabOrder\":9000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Supported Data Sources.Classification\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Supported Data Sources\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Classification\"},\"Name\":\"Supported Data Sources.Classification\",\"NativeReferenceName\":\"Classification1\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"header\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"8D\"}}}}}],\"items\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 61.66,
+          "width": 147.97,
+          "x": 1042.66,
+          "y": 67.14,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"77743f4d42c95e34357c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1207.9370078740158,\"y\":691.6535433070866,\"z\":4000,\"width\":71.81102362204724,\"height\":24.188976377952756,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Data Refresh.Date)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Data Refresh\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Date\"}},\"Function\":3},\"Name\":\"Min(Data Refresh.Date)\",\"NativeReferenceName\":\"Earliest Date\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Date\"}},\"Function\":3}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"8D\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 24.19,
+          "width": 71.81,
+          "x": 1207.94,
+          "y": 691.65,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"8f1aaf21e2fc70929ee2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1111.9370078740158,\"y\":686.3622047244094,\"z\":5000,\"width\":104.31496062992126,\"height\":32.503937007874015,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Last Update:\",\"textStyle\":{\"fontSize\":\"8pt\",\"lineHeight\":\"0\",\"position\":\"relative\",\"verticalAlign\":\"baseline\",\"scriptType\":\"sub\",\"bottom\":\"-0.25em\"}}],\"horizontalTextAlignment\":\"right\"}]}}]}}}",
+          "filters": "[]",
+          "height": 32.50,
+          "width": 104.31,
+          "x": 1111.94,
+          "y": 686.36,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"b6a960f929acff42b3bf\",\"layouts\":[{\"id\":0,\"position\":{\"x\":80,\"y\":112.00000000000001,\"z\":1000,\"width\":1136,\"height\":80,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DataSourceCategory.Data Source Category\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DataSourceCategory\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Data Source Category\"},\"Name\":\"DataSourceCategory.Data Source Category\",\"NativeReferenceName\":\"Data Source Category\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DataSourceCategory\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Data Source Category\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Azure'\"}}]]}}}]}}}}],\"selection\":[{\"properties\":{\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"header\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Category'\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showRestatement\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}},\"italic\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"items\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"100D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 80.00,
+          "width": 1136.00,
+          "x": 80.00,
+          "y": 112.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"cd0c2e4f7be2922b760b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":890.5803996194102,\"y\":64.39581351094196,\"z\":9001,\"width\":147.28829686013322,\"height\":67.1360608943863,\"tabOrder\":9001}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Supported Data Sources.Sensitivity Labels\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Supported Data Sources\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Sensitivity Labels\"},\"Name\":\"Supported Data Sources.Sensitivity Labels\",\"NativeReferenceName\":\"Sensitivity Labels\"}]},\"columnProperties\":{\"Supported Data Sources.Sensitivity Labels\":{\"formatString\":\"G\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"header\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}],\"items\":[{\"properties\":{\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 67.14,
+          "width": 147.29,
+          "x": 890.58,
+          "y": 64.40,
+          "z": 9001.00
+        },
+        {
+          "config": "{\"name\":\"fc8419b1aa3a1ccc590f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":112,\"y\":16,\"z\":3000,\"width\":656.0000000000001,\"height\":64,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Purview Data Governance\",\"textStyle\":{\"fontFamily\":\"Segoe (Bold)\",\"fontSize\":\"20pt\"}}]},{\"textRuns\":[{\"value\":\"Supported Data Sources & File Types\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontFamily\":\"Segoe UI Light\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 64.00,
+          "width": 656.00,
+          "x": 112.00,
+          "y": 16.00,
+          "z": 3000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

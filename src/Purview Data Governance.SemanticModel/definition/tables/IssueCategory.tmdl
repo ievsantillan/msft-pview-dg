@@ -1,0 +1,39 @@
+table IssueCategory
+	lineageTag: e7d198bb-f558-439c-a9e8-1b42378a0094
+
+	column 'Issue Category ID'
+		isHidden
+		formatString: 0
+		lineageTag: 2cdce7ad-e3fc-4d4a-b470-64251230b4bf
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Issue Category ID]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Issue Category'
+		lineageTag: 707a745d-7828-4883-ad61-a4ec2b285e21
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Issue Category]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition IssueCategory = calculated
+		mode: import
+		source = ```
+				
+				DATATABLE(
+				    "Issue Category ID", INTEGER,
+				    "Issue Category", STRING,
+				    {
+				        {1, "Catalog Management"},
+				        {2, "Discovery"},
+				        {3, "Health Management"}
+				    }
+				)
+				
+				```
+
+	annotation PBI_Id = 4eacceab3c1946fdaa77cc267a4cf288
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Purview Data Governance"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "5646a9b8-6f90-80b6-4fa2-155949f27369"
+  }
+}

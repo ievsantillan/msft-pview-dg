@@ -1,0 +1,77 @@
+table 'Supported Data Sources'
+	lineageTag: d5fd4317-eb06-4b15-9065-fd0cb27cc740
+
+	column 'Data source'
+		dataType: string
+		lineageTag: f216cee3-86a6-4ac2-bef4-9deb368a0cc3
+		summarizeBy: none
+		sourceColumn: Data source
+
+		annotation SummarizationSetBy = Automatic
+
+	column Classification
+		dataType: string
+		lineageTag: 0303f723-b176-4ea2-b571-45a63dd7ba78
+		summarizeBy: none
+		sourceColumn: Classification
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sensitivity Labels'
+		dataType: string
+		lineageTag: 6508a870-7844-4002-9f21-0e210d6e0603
+		summarizeBy: none
+		sourceColumn: Sensitivity Labels
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Access Policy'
+		dataType: string
+		lineageTag: 1b84cda3-c7c1-4e71-875a-f7316eabb14d
+		summarizeBy: none
+		sourceColumn: Access Policy
+
+		annotation SummarizationSetBy = Automatic
+
+	column Lineage
+		dataType: string
+		lineageTag: 74bff3df-e317-49e1-8ea8-426f81fdd37a
+		summarizeBy: none
+		sourceColumn: Lineage
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Live View'
+		dataType: string
+		lineageTag: 95cbec45-736b-422b-b89c-50e1dcc8b0b5
+		summarizeBy: none
+		sourceColumn: Live View
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data Source Category ID'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 43dd755b-35fd-457f-8cf3-87c40b451b0f
+		summarizeBy: none
+		sourceColumn: Data Source Category ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Supported Data Sources' = m
+		mode: import
+		queryGroup: 'Supported Data Sources'
+		source =
+				let
+				    Source = Table.Combine({Azure, Database, File, #"Services and apps"}),
+				    #"Renamed Columns" = Table.RenameColumns(Source,{{"Can automatically apply classifications", "Classification"}, {"Can apply sensitivity labels to Data Map assets", "Sensitivity Labels"}, {"Can apply policies", "Access Policy"}, {"Accessible in live view", "Live View"}, {"Data lineage", "Lineage"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

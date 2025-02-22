@@ -1,0 +1,121 @@
+expression 'Unified Catalog management' =
+		let
+		    Source = Web.BrowserContents("https://learn.microsoft.com/en-us/purview/data-governance-known-issues"),
+		    #"Extracted Table From Html" = Html.Table(Source, {{"Column1", "DIV.has-inner-focus:nth-child(7) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(1)"}, {"Column2", "DIV.has-inner-focus:nth-child(7) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(2)"}, {"Column3", "DIV.has-inner-focus:nth-child(7) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(3)"}, {"Column4", "DIV.has-inner-focus:nth-child(7) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(4)"}, {"Column5", "DIV.has-inner-focus:nth-child(7) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(5)"}}, [RowSelector="DIV.has-inner-focus:nth-child(7) > TABLE.table.table-sm.margin-top-none > * > TR"]),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Extracted Table From Html", [PromoteAllScalars=true]),
+		    #"Renamed Columns" = Table.RenameColumns(#"Promoted Headers",{{"Description", "Title"}}),
+		    #"Added Custom" = Table.AddColumn(#"Renamed Columns", "Issue Category ID", each 1),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Added Custom",{{"Issue ID", Int64.Type}, {"Title", type text}, {"Publish Date", type date}, {"Status", type text}, {"Fixed Date", type text}, {"Issue Category ID", Int64.Type}})
+		in
+		    #"Changed Type"
+	lineageTag: 6a4eb349-d6ef-4118-b0ed-37d5e579eb1c
+	queryGroup: 'Known Issues'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression Discovery =
+		let
+		    Source = Web.BrowserContents("https://learn.microsoft.com/en-us/purview/data-governance-known-issues"),
+		    #"Extracted Table From Html" = Html.Table(Source, {{"Column1", "DIV.has-inner-focus:nth-child(10) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(1)"}, {"Column2", "DIV.has-inner-focus:nth-child(10) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(2)"}, {"Column3", "DIV.has-inner-focus:nth-child(10) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(3)"}, {"Column4", "DIV.has-inner-focus:nth-child(10) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(4)"}, {"Column5", "DIV.has-inner-focus:nth-child(10) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(5)"}}, [RowSelector="DIV.has-inner-focus:nth-child(10) > TABLE.table.table-sm.margin-top-none > * > TR"]),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Extracted Table From Html", [PromoteAllScalars=true]),
+		    #"Added Custom" = Table.AddColumn(#"Promoted Headers", "Issue Category ID", each 2),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Added Custom",{{"Issue ID", Int64.Type}, {"Title", type text}, {"Publish Date", type date}, {"Status", type text}, {"Fixed Date", type date}, {"Issue Category ID", Int64.Type}})
+		in
+		    #"Changed Type"
+	lineageTag: a5617cd2-dbc0-4772-ad90-2dcb7653d454
+	queryGroup: 'Known Issues'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 'Health management' =
+		let
+		    Source = Web.BrowserContents("https://learn.microsoft.com/en-us/purview/data-governance-known-issues"),
+		    #"Extracted Table From Html" = Html.Table(Source, {{"Column1", "DIV.has-inner-focus:nth-child(13) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(1)"}, {"Column2", "DIV.has-inner-focus:nth-child(13) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(2)"}, {"Column3", "DIV.has-inner-focus:nth-child(13) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(3)"}, {"Column4", "DIV.has-inner-focus:nth-child(13) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(4)"}, {"Column5", "DIV.has-inner-focus:nth-child(13) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(5)"}}, [RowSelector="DIV.has-inner-focus:nth-child(13) > TABLE.table.table-sm.margin-top-none > * > TR"]),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Extracted Table From Html", [PromoteAllScalars=true]),
+		    #"Added Custom" = Table.AddColumn(#"Promoted Headers", "Issue Category ID", each 3),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Added Custom",{{"Issue ID", Int64.Type}, {"Title", type text}, {"Publish Date", type date}, {"Status", type text}, {"Fixed Date", type text}, {"Issue Category ID", Int64.Type}})
+		in
+		    #"Changed Type"
+	lineageTag: 52dc2acb-ae46-4eb5-aa15-bfded36a3462
+	queryGroup: 'Known Issues'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression Azure =
+		let
+		    Source = Web.BrowserContents("https://learn.microsoft.com/en-us/purview/microsoft-purview-connector-overview"),
+		    #"Extracted Table From Html" = Html.Table(Source, {{"Column1", "DIV.has-inner-focus:nth-child(11) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(1)"}, {"Column2", "DIV.has-inner-focus:nth-child(11) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(2)"}, {"Column3", "DIV.has-inner-focus:nth-child(11) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(3)"}, {"Column4", "DIV.has-inner-focus:nth-child(11) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(4)"}, {"Column5", "DIV.has-inner-focus:nth-child(11) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(5)"}, {"Column6", "DIV.has-inner-focus:nth-child(11) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(6)"}}, [RowSelector="DIV.has-inner-focus:nth-child(11) > TABLE.table.table-sm.margin-top-none > * > TR"]),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Extracted Table From Html", [PromoteAllScalars=true]),
+		    #"Removed Top Rows" = Table.Skip(#"Promoted Headers",1),
+		    #"Added Custom" = Table.AddColumn(#"Removed Top Rows", "Data Source Category ID", each 1),
+		    #"Reordered Columns" = Table.ReorderColumns(#"Added Custom",{"Data Source Category ID", "Data source", "Can automatically apply classifications", "Can apply sensitivity labels to Data Map assets", "Can apply policies", "Data lineage", "Accessible in live view"}),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Reordered Columns",{{"Data source", type text}, {"Can automatically apply classifications", type text}, {"Can apply sensitivity labels to Data Map assets", type text}, {"Can apply policies", type text}, {"Data lineage", type text}, {"Accessible in live view", type text}, {"Data Source Category ID", Int64.Type}})
+		in
+		    #"Changed Type"
+	lineageTag: 84f45035-b451-475c-9e5b-51275f75a932
+	queryGroup: 'Supported Data Sources'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression Database =
+		let
+		    Source = Web.BrowserContents("https://learn.microsoft.com/en-us/purview/microsoft-purview-connector-overview"),
+		    #"Extracted Table From Html" = Html.Table(Source, {{"Column1", "DIV.has-inner-focus:nth-child(15) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(1)"}, {"Column2", "DIV.has-inner-focus:nth-child(15) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(2)"}, {"Column3", "DIV.has-inner-focus:nth-child(15) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(3)"}, {"Column4", "DIV.has-inner-focus:nth-child(15) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(4)"}, {"Column5", "DIV.has-inner-focus:nth-child(15) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(5)"}, {"Column6", "DIV.has-inner-focus:nth-child(15) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(6)"}}, [RowSelector="DIV.has-inner-focus:nth-child(15) > TABLE.table.table-sm.margin-top-none > * > TR"]),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Extracted Table From Html", [PromoteAllScalars=true]),
+		    #"Removed Top Rows" = Table.Skip(#"Promoted Headers",1),
+		    #"Added Custom" = Table.AddColumn(#"Removed Top Rows", "Data Source Category ID", each 2),
+		    #"Reordered Columns" = Table.ReorderColumns(#"Added Custom",{"Data Source Category ID", "Data source", "Can automatically apply classifications", "Can apply sensitivity labels to Data Map assets", "Can apply policies", "Data lineage", "Accessible in live view"}),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Reordered Columns",{{"Data source", type text}, {"Can automatically apply classifications", type text}, {"Can apply sensitivity labels to Data Map assets", type text}, {"Can apply policies", type text}, {"Data lineage", type text}, {"Accessible in live view", type text}, {"Data Source Category ID", Int64.Type}})
+		in
+		    #"Changed Type"
+	lineageTag: bf6d265e-e07b-4690-832f-5e4515776a9b
+	queryGroup: 'Supported Data Sources'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression File =
+		let
+		    Source = Web.BrowserContents("https://learn.microsoft.com/en-us/purview/microsoft-purview-connector-overview"),
+		    #"Extracted Table From Html" = Html.Table(Source, {{"Column1", "DIV.has-inner-focus:nth-child(19) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(1)"}, {"Column2", "DIV.has-inner-focus:nth-child(19) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(2)"}, {"Column3", "DIV.has-inner-focus:nth-child(19) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(3)"}, {"Column4", "DIV.has-inner-focus:nth-child(19) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(4)"}, {"Column5", "DIV.has-inner-focus:nth-child(19) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(5)"}, {"Column6", "DIV.has-inner-focus:nth-child(19) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(6)"}}, [RowSelector="DIV.has-inner-focus:nth-child(19) > TABLE.table.table-sm.margin-top-none > * > TR"]),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Extracted Table From Html", [PromoteAllScalars=true]),
+		    #"Removed Top Rows" = Table.Skip(#"Promoted Headers",1),
+		    #"Added Custom" = Table.AddColumn(#"Removed Top Rows", "Data Source Category ID", each 3),
+		    #"Reordered Columns" = Table.ReorderColumns(#"Added Custom",{"Data Source Category ID", "Data source", "Can automatically apply classifications", "Can apply sensitivity labels to Data Map assets", "Can apply policies", "Data lineage", "Accessible in live view"}),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Reordered Columns",{{"Data source", type text}, {"Can automatically apply classifications", type text}, {"Can apply sensitivity labels to Data Map assets", type text}, {"Can apply policies", type text}, {"Data lineage", type text}, {"Accessible in live view", type text}, {"Data Source Category ID", Int64.Type}})
+		in
+		    #"Changed Type"
+	lineageTag: 291472f5-daf6-4871-bcd6-e9571630618c
+	queryGroup: 'Supported Data Sources'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 'Services and apps' =
+		let
+		    Source = Web.BrowserContents("https://learn.microsoft.com/en-us/purview/microsoft-purview-connector-overview"),
+		    #"Extracted Table From Html" = Html.Table(Source, {{"Column1", "DIV.has-inner-focus:nth-child(23) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(1)"}, {"Column2", "DIV.has-inner-focus:nth-child(23) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(2)"}, {"Column3", "DIV.has-inner-focus:nth-child(23) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(3)"}, {"Column4", "DIV.has-inner-focus:nth-child(23) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(4)"}, {"Column5", "DIV.has-inner-focus:nth-child(23) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(5)"}, {"Column6", "DIV.has-inner-focus:nth-child(23) > TABLE.table.table-sm.margin-top-none > * > TR > :nth-child(6)"}}, [RowSelector="DIV.has-inner-focus:nth-child(23) > TABLE.table.table-sm.margin-top-none > * > TR"]),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Extracted Table From Html", [PromoteAllScalars=true]),
+		    #"Removed Top Rows" = Table.Skip(#"Promoted Headers",1),
+		    #"Added Custom" = Table.AddColumn(#"Removed Top Rows", "Data Source Category ID", each 4),
+		    #"Reordered Columns" = Table.ReorderColumns(#"Added Custom",{"Data Source Category ID", "Data source", "Can automatically apply classifications", "Can apply sensitivity labels to Data Map assets", "Can apply policies", "Data lineage", "Accessible in live view"}),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Reordered Columns",{{"Data source", type text}, {"Can automatically apply classifications", type text}, {"Can apply sensitivity labels to Data Map assets", type text}, {"Can apply policies", type text}, {"Data lineage", type text}, {"Accessible in live view", type text}, {"Data Source Category ID", Int64.Type}})
+		in
+		    #"Changed Type"
+	lineageTag: 973c7fb1-086a-49d9-89cf-814ce121c38a
+	queryGroup: 'Supported Data Sources'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
