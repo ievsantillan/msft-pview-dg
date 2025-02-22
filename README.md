@@ -27,3 +27,10 @@ Contributions are welcome! If you have updates or new insights, feel free to sub
 1. **Clone the Repository**:  
    ```sh
    git clone https://github.com/ievsantillan/msft-pview-dg.git
+1. **Browse to src**
+   ```sh
+   \msft-pview-dg\src
+1. **Open `Purview Data Governance.pbix`** refresh and publish the report to the Power BI Service.
+1. (Optional) Set up your On-Premise Data Gateway [(OPDG)](https://learn.microsoft.com/en-us/data-integration/gateway/service-gateway-install) to schedule your refresh. 
+
+   
