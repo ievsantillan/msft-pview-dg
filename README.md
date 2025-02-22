@@ -11,7 +11,7 @@ This report helps users stay informed about **current limitations, updates, and 
 
 ## Features  
 - 📊 **Interactive Power BI report**  
-- ✅ **Up-to-date known issues** from Microsoft Purview  
+- ✅ **Up-to-date known issues** from Microsoft Purview Data Governance  
 - 🔍 **Comprehensive list of supported data sources**  
 
 ## Data Sources
