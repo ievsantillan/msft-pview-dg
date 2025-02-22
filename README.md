@@ -3,9 +3,10 @@
 ## Overview  
 This repository contains a **Power BI report** that provides insights into **Microsoft Purview Data Governance**, including:  
 
-- 🛠 **Known Issues**: Track reported issues affecting Microsoft Purview.  
+- 🛠 **Known Issues**: Track reported issues affecting Microsoft Purview.
+  -  ![Known Issues](img/pview-issues.png)
 - 🔗 **Supported Data Sources**: View and analyze data sources that integrate with the **Purview Data Map**.  
-
+  -  ![Supported Data Sources](img/pview-data-source.png)
 This report helps users stay informed about **current limitations, updates, and compatibility** within Microsoft Purview.  
 
 ## Features  
