@@ -17,6 +17,7 @@ This report helps users stay informed about **current limitations, updates, and 
 ## Data Sources
 - [Data governance known issues](https://learn.microsoft.com/en-us/purview/data-governance-known-issues)
 - [Data sources that connect to Data Map](https://learn.microsoft.com/en-us/purview/microsoft-purview-connector-overview)
+
 Reports are updated periodically to reflect the latest known issues and supported data sources.
 
 ## Contributing
